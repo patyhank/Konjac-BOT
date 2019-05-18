@@ -100,4 +100,7 @@ client.on('message', message => {
       message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`)
 }
 });
+client.on('guildMemberAdd', (guildMember) => {
+  guildMember.addRole('578874211708436491');
+});
 client.login(process.env.token);
