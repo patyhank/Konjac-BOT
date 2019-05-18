@@ -1,0 +1,3 @@
+:go
+node .
+goto go
