@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     //if(!message.member.roles.find("name", "「副服主」co-owner") || !message.member.roles.find("name", "「服主」Owner ")){
     //message.reply(':no_entry: 你沒有權限')
         let ani = args.join(" ");
-        let channel = message.guild.channels.find('id', '555002739306921984');
+        let channel = message.guild.channels.find('id', '579294730123214858');
         const aninewbangumi = new Discord.RichEmbed()
         .setColor('GREEN')
         .setTitle("動畫瘋新番!!!")
