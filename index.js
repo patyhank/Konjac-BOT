@@ -100,4 +100,4 @@ client.on('message', message => {
       message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`)
 }
 });
-client.login(token.token);
+client.login(process.env.token);
