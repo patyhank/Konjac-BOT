@@ -6,7 +6,6 @@ const client = new Discord.Client();
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 moment.locale('zh_tw');
-const token = require("./config.json");
 client.aliases = new Enmap();
 client.commands = new Enmap();
 var readline = require('readline');
