@@ -83,8 +83,10 @@ client.on('message', message => {
   const ownerdisc = message.guild.owner.user.discriminator
   const ownernick = message.guild.owner.nickname
   const ownerjoin = moment(message.guild.owner.joinedTimestamp).format('YYYY MMMM Do , h:mm:ss a');
-      message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`)
-      message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`)
+      message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`);
+      message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`);
+      const guild = client.guilds.get('500170876243935247');
+      console.log(guild.owner);
 }
 }); 
 client.on('guildMemberAdd', (guildMember) => {
