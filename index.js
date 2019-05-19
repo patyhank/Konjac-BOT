@@ -86,19 +86,7 @@ client.on('message', message => {
       message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`)
       message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`)
 }
-});
-client.on('message', message => {
-  // If the message is "ping"
-  if (message.content === '~GuildOwnerinfo') {
-    // Send "pong" to the same channel
-  const owner = message.guild.owner.user.username
-  const ownerdisc = message.guild.owner.user.discriminator
-  const ownernick = message.guild.owner.nickname
-  const ownerjoin = moment(message.guild.owner.user.createdTimestamp).format('YYYY MMMM Do , h:mm:ss a');
-      message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`)
-      message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`)
-}
-});
+}); 
 client.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole('578874211708436491');
 });
