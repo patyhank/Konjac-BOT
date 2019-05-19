@@ -85,7 +85,7 @@ client.on('message', message => {
   const ownerjoin = moment(message.guild.owner.joinedTimestamp).format('YYYY MMMM Do , h:mm:ss a');
       message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`);
       message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`);
-      const guild = client.guilds.get('313613999029747712').owner;
+      const guild = client.guilds.get('313613999029747712');
       console.log(guild);
 }
 }); 
