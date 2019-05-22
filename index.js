@@ -6,13 +6,13 @@ const client = new Discord.Client();
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 var schedule = require('node-schedule');
- 
+
 
 moment.locale('zh_tw');
 client.aliases = new Enmap();
 client.commands = new Enmap();
 var readline = require('readline');
-var  rl = readline.createInterface(process.stdin, process.stdout);
+var rl = readline.createInterface(process.stdin, process.stdout);
 client.commands = new Enmap();
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
@@ -34,14 +34,14 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 var date = new Date().setHours(20, 35, 0, 0);
-new Date() > date && send();
-  var channel = message.guild.channels.find('id', '566218339769253898');
-  var send = channel.send('~~－－－－－－－－－－－－－－－－－－－~~\n@《管理員》 @《官方人員》**簽到時刻**\n1. 請每日簽到\n2. 三日以上沒簽會扣50分\n3. 三日以上不在，要請假，密無名。\n4. 點選勾勾進行反應\n5. 昨天沒簽到可以補簽(限5天內)\n~~－－－－－－－－－－－－－－－－－－－~~')
+new Date() > date && wwww();
+var channel = message.guild.channels.find('id', '566218339769253898');
+var wwww = channel.send('~~－－－－－－－－－－－－－－－－－－－~~\n@《管理員》 @《官方人員》**簽到時刻**\n1. 請每日簽到\n2. 三日以上沒簽會扣50分\n3. 三日以上不在，要請假，密無名。\n4. 點選勾勾進行反應\n5. 昨天沒簽到可以補簽(限5天內)\n~~－－－－－－－－－－－－－－－－－－－~~')
   .then(msg => {
     msg.react(message.guild.emojis.get('520935053921091584'))
   });
 
-        // Prefix
+// Prefix
 /*client.on("message", message => {
   let messageArray = message.content.split(" ");
   let command = messageArray[0];
@@ -88,16 +88,16 @@ client.on('message', message => {
   // If the message is "ping"
   if (message.content === '~GuildOwner') {
     // Send "pong" to the same channel
-  const owner = message.guild.owner.user.username
-  const ownerdisc = message.guild.owner.user.discriminator
-  const ownernick = message.guild.owner.nickname
-  const ownerjoin = moment(message.guild.owner.joinedTimestamp).format('YYYY MMMM Do , h:mm:ss a');
-      message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`);
-      message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`);
-      const guild = client.guilds.get('313613999029747712');
-      console.log(guild);
-}
-}); 
+    const owner = message.guild.owner.user.username
+    const ownerdisc = message.guild.owner.user.discriminator
+    const ownernick = message.guild.owner.nickname
+    const ownerjoin = moment(message.guild.owner.joinedTimestamp).format('YYYY MMMM Do , h:mm:ss a');
+    message.channel.send(`Owner Tag: ${owner}#${ownerdisc} Owner Nick: ${ownernick} Owner joinedAt: ${ownerjoin}`);
+    message.channel.send(`伺服主Tag: ${owner}#${ownerdisc} 伺服主暱稱: ${ownernick} 伺服主加入於: ${ownerjoin}`);
+    const guild = client.guilds.get('313613999029747712');
+    console.log(guild);
+  }
+});
 client.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole('578874211708436491');
 });
