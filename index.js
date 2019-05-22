@@ -5,6 +5,9 @@ const moment = require('moment');
 const client = new Discord.Client();
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
+var schedule = require('node-schedule');
+ 
+
 moment.locale('zh_tw');
 client.aliases = new Enmap();
 client.commands = new Enmap();
@@ -30,7 +33,13 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-
+schedule.scheduleJob('59 59 23 * * *', function(){
+  var channel = message.guild.channels.find('id', '555002739306921984');
+  channel.send('~~－－－－－－－－－－－－－－－－－－－~~\n@《管理員》 @《官方人員》**簽到時刻**\n1. 請每日簽到\n2. 三日以上沒簽會扣50分\n3. 三日以上不在，要請假，密無名。\n4. 點選勾勾進行反應\n5. 昨天沒簽到可以補簽(限5天內)\n~~－－－－－－－－－－－－－－－－－－－~~')
+  .then(msg => {
+    msg.react(message.guild.emojis.get('520935053921091584'))
+  });
+});
 
         // Prefix
 /*client.on("message", message => {
