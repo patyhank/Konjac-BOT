@@ -34,12 +34,11 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 client.on('message', message => {
-  // If the message is "ping"
   var date = new Date().setHours(20, 55, 0, 0);
   new Date() > date && wwww();
   var wwww = client.channels.get('566218339769253898').send('~~－－－－－－－－－－－－－－－－－－－~~\n@《管理員》 @《官方人員》**簽到時刻**\n1. 請每日簽到\n2. 三日以上沒簽會扣50分\n3. 三日以上不在，要請假，密無名。\n4. 點選勾勾進行反應\n5. 昨天沒簽到可以補簽(限5天內)\n~~－－－－－－－－－－－－－－－－－－－~~')
-    .then(msg => {
-      msg.react(message.guild.emojis.get('520935053921091584'))
+    .then(message => {
+      message.react(message.guild.emojis.get('520935053921091584'));
     });
 });
 
