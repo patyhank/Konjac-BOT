@@ -1,0 +1,15 @@
+{
+    "username": "規則喵",
+    "embeds": [{
+    	"title": "規則",
+    	"color": "ea0000",
+    	"fields": [
+    		{
+    			"name": "不得散佈色情、猥褻等限制級訊息",
+    			"value": "散佈者 即立即請出本群組",
+    			"inline": true
+    			
+    		}]
+    }]
+    
+}

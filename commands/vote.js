@@ -3,7 +3,7 @@ module.exports.run = async (bot, message, args) => {
     message.delete("1");
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry:  你沒有權限");
     let vote = args.join(" ");
-      let channel = message.guild.channels.find(channel => channel.id === '563595587656613889');
+      let channel = message.guild.channels.find(channel => channel.name === '投票');
       const vo = new Discord.RichEmbed()
       .setColor('GREEN')
       .addField("投票:", `${vote}`);
