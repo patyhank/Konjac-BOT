@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
   //if(!message.member.roles.find("name", "「副服主」co-owner") || !message.member.roles.find("name", "「服主」Owner ")){
   //message.reply(':no_entry: 你沒有權限')
   var banuser = message.mentions.users.first().id
-  message.guild.ban(banuser);
-
+  message.guild.ban(banuser)
+  .then(msg => {
+    msg.send("BAN除成功")
+  });
 }
