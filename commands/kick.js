@@ -11,6 +11,6 @@ module.exports.run = async (bot, message, args) => {
   var banuser = message.mentions.users.first().id
   message.guild.ban(banuser)
   .then(msg => {
-    msg.send("BAN除成功")
+    msg.channel.send("BAN除成功")
   });
 }
