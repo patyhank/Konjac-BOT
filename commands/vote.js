@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     message.delete("1");
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry:  你沒有權限");
+    if(message.member.id != "276337222196658178") return message.channel.send(":no_entry:  你沒有權限");
     let vote = args.join(" ");
       let channel = message.guild.channels.find(channel => channel.name === '投票');
       const vo = new Discord.RichEmbed()
