@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const mine
 var request = require('request');
 module.exports.run = async (client, message, args) => {
       message.delete();
