@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
           request(options, function (error, response, body) {
             if (!error && response.statusCode == 200) {
               console.log(body)
-              if ('name' in Data_Array.Private.Price) {
+              if ('name' in body) {
                 message.member.addRole('589106886398312448')
                 message.member.removeRole('589375747433693194')
                 message.member.setNickname(message.content)
