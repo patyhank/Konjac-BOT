@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
       setTimeout(() => {
         var ign = args[1]
         var options = {
-            uri: 'https://api.mojang.com/profiles/minecraft',
+            url: 'https://api.mojang.com/profiles/minecraft',
             method: 'POST',
             json: ign
           };
