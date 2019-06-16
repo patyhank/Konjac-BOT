@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
         var options = {
             uri: 'https://api.mojang.com/profiles/minecraft',
             method: 'POST',
-            json: [`${ign}`]
+            json: ign
           };
           
           request(options, function (error, response, body) {
