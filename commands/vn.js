@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
           request(options, function (error, response, body) {
             if (!error && response.statusCode == 200) {
               console.log(body)
-              if (!("name" in body)) {
+              if (!("patyhank" in body)) {
                 message.channel.send("ID 識別失敗");
                 // more code
             } else {
