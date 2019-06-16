@@ -12,13 +12,13 @@ module.exports.run = async (client, message, args) => {
           request(options, function (error, response, body) {
             if (!error && response.statusCode == 200) {
               console.log(body)
-              if (body.hasOwnProperty('name')) {
-                message.member.addRole('589106886398312448')
-                message.member.removeRole('589375747433693194')
-                message.member.setNickname(message.content)
+              if (!("name" in body)) {
+                message.channel.send("ID 識別失敗");
                 // more code
             } else {
-                message.channel.send("ID 識別失敗")
+                message.member.addRole('589106886398312448');
+                message.member.removeRole('589375747433693194');
+                message.member.setNickname(message.content);
             }
             }
           });
