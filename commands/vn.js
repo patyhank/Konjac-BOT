@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 var request = require('request');
 module.exports.run = async (client, message, args) => {
-      message.delete();
       setTimeout(() => {
         var ign = args[1]
         var options = {
