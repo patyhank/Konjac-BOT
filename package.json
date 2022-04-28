@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "better-sqlite-pool": "^0.2.2",
     "delay": "^4.1.0",
     "discord-money": "^0.2.0",
